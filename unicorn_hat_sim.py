@@ -7,12 +7,14 @@ try:
 except ImportError:
     print("To simulate a unicorn HAT on your computer, please pip install pygame")
 
+
+
 class UnicornHatSim(object):
     def __init__(self, width, height, rotation_offset = 0):
         # Compat with old library
         self.AUTO = None
         self.PHAT = None
-            
+
         # Set some defaults
         self.rotation_offset = rotation_offset
         self.rotation(0)
@@ -108,6 +110,4 @@ class UnicornHatSim(object):
 unicornhat = UnicornHatSim(8,8)
 unicornphat = UnicornHatSim(8, 4)
 
-# Unicornhat HD seems to be the other way around (not that there's anything wrong with that), so we rotate it 180°
 unicornhathd = UnicornHatSim(16, 16, 180)
-
